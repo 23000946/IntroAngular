@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Formulario basico, suma, resta, multiplicacion, divicion
+            Form module-->
+            
+            <div class="col-6">
+                <form>
+                <div class="form-group pt-4">
+                    <label for="num1">Numero 1</label>
+                    <input [(ngModel)]="num1" name="num1" type="text" class="form-control"
+                    placeholder="Ingrese el numero 1">
+                </div>
+                <div>
+                    <label for="num2">Numero 2</label>
+                    <input [(ngModel)]="num2" name="num2" type="text" class="form-control"
+                    placeholder="Ingrese el numero 2">
+                </div>
+                <br />
+                <br />
+                 <!--
+                
+                <br />
+                <br />
+
+                <button (click)="calcular()" type="button" class="btn btn-primary">Calcular</button>
+
+                <br />
+                    <button (click)="sumar()" type="button" class="btn btn-primary">Sumar</button>
+                    <br />
+                    <br />
+                    <button (click)="restar()" type="button" class="btn btn-primary">Resta</button>
+                    <br />
+                    <br />
+                    <button (click)="multi()" type="button" class="btn btn-primary">Multiplicación</button>
+                    <br />
+                    <br />
+                    <button (click)="divicion()" type="button" class="btn btn-primary">Divicion</button>
+                    -->
+                    <br />
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opSumar" value="sumar" [(ngModel)]="operacionSeleccionada">
+                        <label class="form-check-label" for="opSumar">Sumar</label>
+                        <br />
+  
+                        <input class="form-check-input" type="radio" name="operacion" id="opRestar" value="restar" [(ngModel)]="operacionSeleccionada">
+                        <label class="form-check-label" for="opRestar">Restar</label>
+                        <br />
+
+                        <input class="form-check-input" type="radio" name="operacion" id="opMulti" value="multi" [(ngModel)]="operacionSeleccionada">
+                        <label class="form-check-label" for="opMulti">Multiplicar</label>
+                        <br />
+
+                        <input class="form-check-input" type="radio" name="operacion" id="opDiv" value="div" [(ngModel)]="operacionSeleccionada">
+                        <label class="form-check-label" for="opDiv">División</label>
+                    </div>
+
+                    <br />
+                    <button (click)="calcular()" type="button" class="btn btn-primary">Calcular</button>
+                </form>
+
+            </div>
+            <div class="col-6">
+                <h2>Resultado: {{Resultado}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
