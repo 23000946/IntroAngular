@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div>
+            <form>
+                <div class="form-group pt-4">
+                    <label for="Alto">Alto</label>
+                    <input [(ngModel)]="Alto" name="Alto" type="text" class="form-control"
+                    placeholder="Alto">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="Ancho">Ancho/Base</label>
+                    <input [(ngModel)]="Ancho" name="Ancho" type="text" class="form-control"
+                    placeholder="Ancho/Base">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="Apotema">Apotema</label>
+                    <input [(ngModel)]="Apotema" name="Apotema" type="text" class="form-control"
+                    placeholder="Apotema">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="Perimetro">Perimetro/Radio</label>
+                    <input [(ngModel)]="Perimetro" name="Perimetro" type="text" class="form-control"
+                    placeholder="Perimetro/Radio">
+                </div>
+
+                <br />
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opCU" value="Cuadrado" [(ngModel)]="figuraselect">
+                        <label class="form-check-label" for="opCU">Cuadrado</label>
+                        <br />
+  
+                        <input class="form-check-input" type="radio" name="operacion" id="opTr" value="Trangulo" [(ngModel)]="figuraselect">
+                        <label class="form-check-label" for="opTr">Trangulo</label>
+                        <br />
+
+                        <input class="form-check-input" type="radio" name="operacion" id="opCirulo" value="Circulo" [(ngModel)]="figuraselect">
+                        <label class="form-check-label" for="opCirulo">Circulo</label>
+                        <br />
+
+                        <input class="form-check-input" type="radio" name="operacion" id="opPen" value="Pentagono" [(ngModel)]="figuraselect">
+                        <label class="form-check-label" for="opPen">Pentagono</label>
+                    </div>
+
+                    <br />
+                    <button (click)="calcular()" type="button" class="btn btn-primary">Calcular</button>
+                    <br />
+                    <br />
+                    <div class="col-6">
+                        <h2>Resultado: {{Resultado}}</h2>
+                    </div>
+
+
+
+            </form>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

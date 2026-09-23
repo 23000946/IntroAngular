@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>Palindromo</h2>
+        <div class="form-group pt-4">
+            <label for="Texto"><input [(ngModel)]="Texto" name="Texto" type="text" class="form-control"
+            placeholder="Ingrese su texto"></label>
+        </div>
+        <br />
+        <button (click)="Palindromo()" type="button" class="btn btn-primary">Calcular</button>
+        <div class="col-6">
+            <h2>{{Numero_Vocales}}</h2>
+            <h2>{{Numero_Consonantes}}</h2>
+        </div>
+
+
+        <script src="" async defer></script>
+    </body>
+</html>

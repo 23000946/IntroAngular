@@ -9,8 +9,6 @@ export class OperasBas {
   num1: string = '';
   num2: string = '';
   Resultado: number = 0;
-  
-  // Variable para guardar la opción elegida (puedes darle un valor por defecto como 'sumar')
   operacionSeleccionada: string = 'sumar';
 
   calcular(): void {
@@ -28,7 +26,7 @@ export class OperasBas {
         this.Resultado = n1 * n2;
         break;
       case 'div':
-        this.Resultado = n2 !== 0 ? n1 / n2 : 0; // Evitamos división entre cero
+        this.Resultado = n2 !== 0 ? n1 / n2 : 0; 
         break;
     }
   }
