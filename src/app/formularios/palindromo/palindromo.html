@@ -1,28 +1,35 @@
-<!DOCTYPE html>
+<div class="container mt-4">
+  <h2>Analizador de Palíndromos</h2>
+  
+  <form>
+    <div class="form-group pt-3">
+      <label for="frase">Ingresa una frase:</label>
+      <input 
+        type="text" 
+        id="frase" 
+        name="frase" 
+        class="form-control" 
+        placeholder="Ejemplo: Anita lava la tina" 
+        [(ngModel)]="textoEntrada"
+      >
+    </div>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h2>Palindromo</h2>
-        <div class="form-group pt-4">
-            <label for="Texto"><input [(ngModel)]="Texto" name="Texto" type="text" class="form-control"
-            placeholder="Ingrese su texto"></label>
-        </div>
-        <br />
-        <button (click)="Palindromo()" type="button" class="btn btn-primary">Calcular</button>
-        <div class="col-6">
-            <h2>{{Numero_Vocales}}</h2>
-            <h2>{{Numero_Consonantes}}</h2>
-        </div>
+    <button type="button" class="btn btn-primary mt-3" (click)="analizar()">
+      Analizar Frase
+    </button>
+  </form>
 
+  <hr />
 
-        <script src="" async defer></script>
-    </body>
-</html>
+  <div class="results-section" *ngIf="esPalindromoResultado">
+    <h3>Resultados:</h3>
+    
+    <p><strong>Número de Vocales:</strong> {{ numVocales }}</p>
+    <p><strong>Vocales encontradas:</strong> {{ vocalesEncontradas.join(', ') }}</p>
+    
+    <p><strong>Número de Consonantes:</strong> {{ numConsonantes }}</p>
+    <p><strong>Consonantes encontradas:</strong> {{ consonantesEncontradas.join(', ') }}</p>
+    
+    <h4><strong>Resultado del Palíndromo:</strong> {{ esPalindromoResultado }}</h4>
+  </div>
+</div>
