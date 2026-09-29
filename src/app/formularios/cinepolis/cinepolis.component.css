@@ -1,0 +1,165 @@
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pantalla completa con el fondo exacto de la imagen */
+.cinepolis-bg {
+  background-image: url('../../../assets/fondo-cinepolis.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Contenedor central que limita la anchura para no esparcir el diseño */
+.content-wrapper {
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Recuadro de título Cinepolis */
+.header-title {
+  background-color: #ffffff;
+  color: #1a3c87;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  width: 180px;
+  margin-bottom: 25px;
+  padding: 2px 0;
+  border: 1px solid #000;
+}
+
+.main-form {
+  width: 100%;
+}
+
+/* Grid en 2 columnas */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Recuadros transparentes idénticos a los del entorno WinForms / VB */
+.group-box {
+  border: 1px solid #ffffff;
+  background-color: #516194b8; /* Totalmente transparente como la imagen */
+  padding: 15px 12px;
+  margin: 0;
+  
+}
+
+.group-box legend {
+  width: auto;
+  padding: 0 8px;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 10px; /* Alineado a la izquierda */
+}
+
+/* Filas e inputs */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"] {
+  width: 130px;
+  height: 22px;
+  padding: 2px;
+  border: 1px solid #7f9db9;
+  text-align: right;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 13px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  width: 130px;
+  font-weight: bold;
+}
+
+/* Alineación exacta del input "Valor a Pagar" con la primera fila de "Entradas" */
+.salidas {
+  min-height: 180px;
+}
+
+.offset-row {
+  margin-top: 15px;
+}
+
+/* Espacio libre para permitir ver el logo Cinépolis impreso en la imagen de fondo */
+.logo-space {
+  height: 110px;
+}
+
+/* Bloque inferior de Acciones */
+.acciones-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.group-box.acciones {
+  width: 280px;
+  padding: 10px 15px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-action {
+  background-color: #e0e0e0;
+  color: #000000;
+  border: 1px solid #888888;
+  padding: 3px 18px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #000000;
+}
+
+.btn-action:hover {
+  background-color: #ffffff;
+}
+
+.error-msg {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+}

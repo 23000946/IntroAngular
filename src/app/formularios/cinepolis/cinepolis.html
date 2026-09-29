@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="瞼IE=edge">
+  <title>Cinépolis</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./cinepolis.component.css">
+</head>
+<body>
+ <div class="cinepolis-bg">
+  <div class="content-wrapper">
+    <div class="header-title">Cinepolis</div>
+
+    <form class="main-form">
+      <div class="content-grid">
+        <fieldset class="group-box entradas">
+          <legend>Entradas</legend>
+          
+          <div class="form-row">
+            <label for="Nombre">Nombre</label>
+            <input [(ngModel)]="Nombre" name="Nombre" id="Nombre" type="text">
+          </div>
+
+          <div class="form-row">
+            <label for="CantidadCompradores">Cantidad Compradores</label>
+            <input [(ngModel)]="CantidadCompradores" name="CantidadCompradores" id="CantidadCompradores" type="number">
+          </div>
+
+          <div class="form-row">
+            <label>Tarjeta Cineco</label>
+            <div class="radio-group">
+              <label><input type="radio" name="TarjetaCineco" value="Si" [(ngModel)]="TarjetaCineco"> Sí</label>
+              <label><input type="radio" name="TarjetaCineco" value="No" [(ngModel)]="TarjetaCineco"> No</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="CantidadBoletas">Cantidad De Boletas</label>
+            <input [(ngModel)]="CantidadBoletas" name="CantidadBoletas" id="CantidadBoletas" type="number">
+          </div>
+        </fieldset>
+
+        <fieldset class="group-box salidas">
+          <legend>Salidas</legend>
+
+          <div class="form-row offset-row">
+            <label for="ValorPagar">Valor a Pagar</label>
+            <input type="text" [value]="ValorPagar | currency:'USD':'symbol':'1.0-0'" readonly>
+          </div>
+
+          <div *ngIf="MensajeError" class="error-msg">
+            {{ MensajeError }}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="logo-space"></div>
+
+      <div class="acciones-container">
+        <fieldset class="group-box acciones">
+          <legend>Acciones</legend>
+          <div class="btn-group">
+            <button (click)="procesar()" type="button" class="btn-action">Procesar</button>
+            <button (click)="salir()" type="button" class="btn-action">Salir</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
